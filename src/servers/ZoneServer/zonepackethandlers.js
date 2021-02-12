@@ -1375,6 +1375,27 @@ const packetHandlers = {
     }
     if (packet.data.commandHash == Jenkins.oaat("HAX")) {
       switch (args[0]) {
+        case "test":
+          server.sendData(client, "ClientBeginZoning", {
+            unknownByte1: 0,
+            zoneName: "Z1",
+            zoneType: 4,
+            position: [1, 2, 3, 1],
+            rotation: [4, 5, 6, 1],
+
+            skyData: {
+              unknownArray: _.fill(Array(50), {
+                unknownDword1: 0,
+                unknownDword2: 0,
+                unknownDword3: 0,
+                unknownDword4: 0,
+                unknownDword5: 0,
+                unknownDword6: 0,
+                unknownDword7: 0,
+              }),
+            },
+          });
+          break;
         case "sonic":
           server.sendData(client, "ClientGameSettings", {
             unknownQword1: "0x0000000000000000",
