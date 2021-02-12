@@ -4940,7 +4940,7 @@ var packets = [
               defaultValue: "0x000000000000000",
             },
             { name: "unknownDword1", type: "uint32", defaultValue: 0 },
-            { name: "cloudWeight0", type: "float", defaultValue: 0.0 },
+            { name: "unknownFloat6", type: "float", defaultValue: 0.0 },
             {
               name: "unknownQword6",
               type: "uint64",
